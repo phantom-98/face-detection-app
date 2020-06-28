@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/singInBackgroundColor"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_log_in_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/welcome_back"
+            android:textColor="@color/titleTextColor"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_log_in_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_log_in_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/login_form_title"
+            android:textColor="@color/titleTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_log_in_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_log_in_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/iv_log_in_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edit_text_backgrownd_one"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_log_in_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_log_in_subtitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/iv_log_in_email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundColor"
+                android:textColor="@color/titleTextColor"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/iv_log_in_password_edit_text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/iv_log_in_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edit_text_backgrownd_two"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_log_in_email"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/iv_log_in_password_edit_text"
+                android:layout_width="match_parent"
+                android:textColor="@color/titleTextColor"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundColor"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_top"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tv_log_in_reset_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:text="Reset Password"
+            app:layout_constraintBottom_toTopOf="@+id/tv_log_in_sing_up_prompt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_bottom"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_log_in_sing_up_prompt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="@string/create_account_title_again"
+            android:textColor="@color/titleTextColor"
+            app:layout_constraintBottom_toTopOf="@+id/btn_log_in_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_log_in_reset_password" />
+
+        <com.design.buttons.PrimaryButton
+            android:id="@+id/btn_log_in_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/btnBackgroundColor"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/titleTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_log_in_sing_up_prompt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

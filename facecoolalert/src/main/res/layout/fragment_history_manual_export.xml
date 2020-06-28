@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbarSize="7dp"
+    android:scrollbarThumbHorizontal="@drawable/circle_blue_btn"
+    android:scrollbarThumbVertical="@drawable/circle_blue_btn"
+    tools:context=".ui.subject.verification.VerificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backButton"
+                android:padding="18dp"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/arrowleftblack"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/backButton"
+                android:paddingTop="5dp"
+                android:text="@string/history_export_by_date"
+                android:textColor="#333333"
+
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="23dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentRight="true"
+
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/facecoolicon" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@id/header"
+            android:background="#CFECECEC"
+
+            >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="visible"
+
+                >
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <!--    select History Export Folder -->
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/historyExportFolderHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Export Folder"
+
+                            android:textColor="#1A1A1A"
+                            android:textSize="14sp"
+
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_below="@id/historyExportFolderHeader"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="current Folder"
+                                android:textSize="10sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/currentFolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="#132558"
+                                android:padding="10sp"
+                                android:text="/"
+                                />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center"
+                                >
+                            <Button
+                                android:id="@+id/select_folder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#132558"
+                                android:text="@string/change_folder" />
+
+                                <Button
+
+                                    android:id="@+id/resetButton"
+                                    android:layout_width="80dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="36dp"
+                                    android:layout_marginTop="4dp"
+
+                                    android:layout_toRightOf="@id/select_folder"
+                                    android:backgroundTint="#CFECECEC"
+                                    android:text="reset"
+                                    android:textAllCaps="false"
+                                    android:textColor="#CF203C"
+
+
+                                    android:textSize="11sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/fromCard"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/fromHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Export from"
+                            android:textColor="#132558"
+                            android:textSize="14sp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_below="@id/fromHeader"
+                            >
+
+
+
+
+                            <!--        start of a field-->
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/fromDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/from_date"
+                                    android:inputType="date"
+                                    android:drawableRight="@drawable/event"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!--        end of a field-->
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+
+                                />
+                            <!--        start of a field  deletion size -->
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/fromtime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/event"
+                                    android:hint="@string/from_time"
+                                    android:inputType="time"
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!--        end of a field-->
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />
+
+
+<!--                To Card-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/toCard"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/toHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/export_upto"
+                            android:textColor="#132558"
+                            android:textSize="14sp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_below="@id/toHeader"
+                            >
+
+
+
+
+                            <!--        start of a field-->
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/toDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/from_date"
+                                    android:inputType="date"
+                                    android:drawableRight="@drawable/event"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!--        end of a field-->
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+
+                                />
+                            <!--        start of a field  deletion size -->
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/toTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/to_time"
+                                    android:inputType="time"
+                                    android:drawableRight="@drawable/event"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!--        end of a field-->
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete_after_export"
+                    android:textColor="@color/red"
+                    android:background="@color/cardview_light_background"
+                    android:textSize="14sp"
+                    android:id="@+id/delete_after_export"
+
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+                <Button
+                    android:id="@+id/exportHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Export"
+                    android:backgroundTint="#CF203C"
+
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+
+
+                <ProgressBar
+                android:id="@+id/horizontalProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progress="0"
+                    android:visibility="invisible"
+                    />
+
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

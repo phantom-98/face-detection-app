@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/live_camera"
+        android:title="@string/menu_live_camera" />
+
+    <item
+        android:id="@+id/nav_watchlist"
+        android:title="@string/menu_watchlist" />
+
+    <item
+        android:id="@+id/nav_subjects"
+        android:title="@string/menu_subjects" />
+
+<!--    <item-->
+<!--        android:id="@+id/nav_students"-->
+<!--        android:title="@string/nav_students"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_cameras"-->
+<!--        -->
+<!--        android:title="@string/menu_cameras"-->
+<!--        android:visibility="gone" />-->
+
+    <item
+        android:id="@+id/nav_visits"
+        android:title="Face Log"/>
+
+    <item
+        android:id="@+id/nav_search"
+        android:title="Search"/>
+
+
+
+    <item
+        android:id="@+id/nav_reports"
+        android:title="@string/menu_alert" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="@string/menu_settings" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:title="@string/menu_help" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="@string/menu_logout"
+        />
+
+</menu>

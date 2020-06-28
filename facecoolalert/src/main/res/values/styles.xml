@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <style name="text_enroll_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_enroll_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/input_bkg_primary</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textColor">@color/primaryDarkColor</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="SpinnerText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:textColor">@color/spinner_text</item>
+    </style>
+
+    <style name="SpinnerCheckbox">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:src">@drawable/checkbox</item>
+    </style>
+
+    <style name="SpinnerDropdownItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="HLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="CameraCardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/detection_item_margin</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="CameraFrameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="scaleType">fitStart</item>
+    </style>
+
+    <style name="LayoutCameraFrames">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/detection_item_margin</item>
+        <item name="android:paddingLeft">@dimen/detection_item_margin</item>
+        <item name="android:paddingRight">@dimen/detection_item_margin</item>
+        <item name="android:paddingBottom">@dimen/detection_item_height</item>
+    </style>
+</resources>

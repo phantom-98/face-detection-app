@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="-40dp"
+        app:cardBackgroundColor="@color/addBackgroundColor"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp">
+
+            <!--     class name   -->
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/add_class_name"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/input_class_name"
+                app:layout_constraintStart_toStartOf="@id/input_class_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_name"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_person"
+                app:layout_constraintEnd_toStartOf="@id/input_class_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_class_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:lines="1"
+                android:inputType="text"
+                android:nextFocusDown="@+id/input_class_id"
+                android:layout_marginStart="10dp"
+                android:imeOptions="actionNext"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/input_bkg_primary"
+                android:fontFamily="@font/inter_medium"
+                android:hint="@string/add_class_name"
+                android:padding="5dp"
+                android:imeActionLabel=""
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_name"
+                app:layout_constraintTop_toTopOf="@+id/icon_name" />
+
+
+            <!--    class ID    -->
+
+            <TextView
+                android:id="@+id/id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/add_class_id"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/name_label"
+                app:layout_constraintTop_toBottomOf="@+id/input_class_name" />
+
+            <ImageView
+                android:id="@+id/icon_id"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_id"
+                app:layout_constraintEnd_toEndOf="@+id/icon_name"
+                app:layout_constraintStart_toStartOf="@id/icon_name"
+                app:layout_constraintTop_toBottomOf="@id/id_label" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_class_id"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="10dp"
+                android:imeOptions="actionDone"
+                android:background="@drawable/input_bkg_primary"
+                android:fontFamily="@font/inter_medium"
+                android:inputType="text"
+                android:hint="@string/add_class_id"
+                android:lines="1"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/input_class_name"
+                app:layout_constraintTop_toTopOf="@+id/icon_id" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_bkg_secondary"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/cancel"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/next_button"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_bkg_primary"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/next"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancel_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

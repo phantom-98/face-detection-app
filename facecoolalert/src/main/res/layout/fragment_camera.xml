@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <include
+            android:id="@+id/toolbar_container"
+            layout="@layout/generic_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cameras_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/layout_frame_cameras"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/camera_border"
+                android:padding="2dp"
+                >
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/placeholder1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/cam_setttings_bg"
+                >
+
+            <LinearLayout
+                android:id="@+id/layout_selectCamera"
+                android:layout_width="@dimen/camera_spinner_width"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+
+
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_camera_select"
+                    android:text="Select Camera"
+                    style="@style/SpinnerText"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/spin_down"/>
+
+
+
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/settings_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_action_settings"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="5dp"
+
+                />
+
+                <ImageView
+                    android:id="@+id/toogle_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingRight="4dp"
+                    app:srcCompat="@android:drawable/stat_notify_sync_noanim"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/latest_detected_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_latest_identified_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="6dp" />
+
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/currentPreview"
+                        android:orientation="horizontal"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/currentCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            app:cardBackgroundColor="@color/detection_card_color"
+                            android:backgroundTint="#008B00"
+                            >
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1sp"
+                                android:background="@color/cardview_light_background"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/image_camera_detection"
+                                    android:layout_width="78dp"
+                                    android:layout_height="78dp"
+
+                                    android:duplicateParentState="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/person"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_user_name"
+                                    android:layout_width="wrap_content"
+                                    android:maxWidth="78dp"
+                                    android:layout_height="16dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_gravity="bottom|left"
+
+                                    android:background="@color/cardview_light_background"
+
+                                    android:duplicateParentState="true"
+                                    android:fontFamily="@font/inter_light"
+                                    android:gravity="center"
+
+                                    android:text=""
+                                    android:textColor="#008B00"
+                                    android:textSize="10sp"
+                                    android:paddingLeft="3dp"
+                                    android:paddingRight="3dp"
+
+                                    android:singleLine="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+
+                                    />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/referenceCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            app:cardBackgroundColor="@color/detection_card_color"
+                            android:backgroundTint="#008B00"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1sp"
+                                android:background="@color/cardview_light_background"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/refimage_camera_detection"
+                                    android:layout_width="78dp"
+                                    android:layout_height="78dp"
+
+                                    android:duplicateParentState="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/person"
+                                    />
+
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_toRightOf="@id/currentPreview"
+                    android:id="@+id/rv_detected_faces_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:layout_alignParentEnd="true"
+                    android:paddingTop="5dp"
+
+                    />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_window"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone"
+            android:paddingTop="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/popup_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/general_progress"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

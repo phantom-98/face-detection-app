@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutCameraFrames"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/HLayout">
+
+        <androidx.cardview.widget.CardView style="@style/CameraCardView">
+
+            <FrameLayout
+                android:id="@+id/layout_camera1"
+                style="@style/CameraFrameLayout"
+
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView style="@style/CameraCardView">
+
+            <FrameLayout
+                android:id="@+id/layout_camera2"
+                style="@style/CameraFrameLayout"
+
+
+                />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout style="@style/HLayout">
+
+        <androidx.cardview.widget.CardView style="@style/CameraCardView">
+
+            <FrameLayout
+                android:id="@+id/layout_camera3"
+                style="@style/CameraFrameLayout"
+
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView style="@style/CameraCardView">
+
+            <FrameLayout
+                android:id="@+id/layout_camera4"
+                style="@style/CameraFrameLayout"
+
+
+                />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>

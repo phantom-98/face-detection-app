@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#ffffff</color>
+
+    <color name="primaryLightColor">#4d588d</color>
+    <color name="primaryDarkColor">#000535</color>
+    <color name="secondaryColor">#cf203c</color>
+    <color name="secondaryLightColor">#ff5c66</color>
+    <color name="secondaryDarkColor">#960016</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+
+    <color name="enr_item_enrolled">#00E324</color>
+    <color name="enr_item_progress">#ffffff</color>
+    <color name="enr_item_queue">#ffffff</color>
+    <color name="enr_item_error">#cf203c</color>
+
+
+
+
+
+    <color name="inputBckOutline">#D2D2D2</color>
+    <color name="inputBckInside">#F6F9FF</color>
+
+
+
+    <color name="enrollmentBackgroundColor1">#D8E0F6</color>
+    <color name="enrollmentBackgroundColor2">#1E2F5F</color>
+
+
+    <color name="reportBackgroundColor">#EFEFEF</color>
+    <color name="report_outline_color">#BDBDBD</color>
+    <color name="terciaryBackgroundColor">#D9D9D9</color>
+    <color name="cameraGreenBackgroundColor">#00E324</color>
+    <color name="btnBackgroundColor">#CFDCFF</color>
+    <color name="backgroundColor">#ffffff</color>
+    <color name="titleTextColor">#000000</color>
+    <color name="splashScreenBackgroundColor">#CF203C</color>
+    <color name="secondaryItemBackgroundColor">#3B518E</color>
+    <color name="addBackgroundColor">#1E2F5F</color>
+    <color name="inputTextBackgroundColor">#F6F9FF</color>
+    <color name="primaryAddButtonBackgroundColor">#009D23</color>
+    <color name="primaryAddButtonTwoBackgroundColor">#5472C7</color>
+    <color name="itemsToolbarBackgroundColor">#F98F0B</color>
+    <color name="itemsToolbarBackgroundColorTransparent">#C6F98F0B</color>
+    <color name="itemBackgroundColor">#E9EFFF</color>
+    <color name="singInBackgroundColor">#EEF3FF</color>
+</resources>

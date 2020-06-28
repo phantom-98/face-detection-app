@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_marginTop="10dp"
+
+
+
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fimage"
+                >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@id/visit_picture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/initial_background"
+
+                />
+                <ProgressBar
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/progres"
+                    />
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@id/subject_picture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@+id/fimage"
+
+
+                android:background="@drawable/initial_background"
+
+                android:src="@drawable/person" />
+
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/subject_picture"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@id/datetimeview"
+
+                >
+
+                <TextView
+
+                    android:id="@+id/subject_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Name "
+                    android:textColor="#000000"
+                    app:autoSizeTextType="uniform"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    />
+
+
+<!--                //score-->
+
+                <TextView
+
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Score "
+                    android:textColor="#29A714"
+                    app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeStepGranularity="1sp"   />
+
+
+
+
+
+<!--                //end of score-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+
+                    app:srcCompat="@drawable/map_pin" />
+
+                    <TextView
+                        android:id="@+id/location_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="Location "
+                        android:textColor="#000000"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeStepGranularity="1sp"   />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/datetimeview"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+
+
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/watchlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="Watchlist"
+                    android:textColor="#000000"
+                    app:autoSizeTextType="uniform"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/visit_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="22/02/2000"
+                    android:textColor="#333333"
+                    app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeStepGranularity="1sp"   />
+
+                <TextView
+                    android:id="@+id/visit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00:00:01"
+                    android:textColor="#333333"
+                    app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeStepGranularity="1sp"   />
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/circle_btn"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu" />
+
+            <ImageView
+                android:id="@+id/iv_top_logo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/face_cool_name"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle_btn"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/iv_left"
+                android:text="Subjects"
+                android:textColor="#333333"
+                android:textSize="20sp"
+
+
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="23dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/facecoolicon" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="@color/backgroundColor"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/titles"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Subjects Enrolled "
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_toLeftOf="@+id/viewReports"
+                android:gravity="center"
+
+
+                />
+
+            <Button
+                android:id="@+id/viewReports"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Enrollment Reports"
+                android:background="#132558"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+
+                android:textSize="10sp"
+                android:textAllCaps="false"
+
+            app:cornerRadius="10dp"
+
+            />
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:orientation="horizontal"
+            android:background="@drawable/textinputborder"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/titles"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/search_subjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@null"
+                android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+                android:drawablePadding="16dp"
+                android:hint="Search for subject"
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="100dp"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/search_container"
+
+
+           >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subjects_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:scrollbars="vertical"
+
+                android:fastScrollEnabled="true"
+                android:fastScrollAlwaysVisible="true"
+
+
+                />
+        </ScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_add_new_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:backgroundTint="#132558"
+            android:src="@drawable/ic_plus_circle"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@android:color/white" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+

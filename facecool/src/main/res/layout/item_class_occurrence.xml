@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    app:cardBackgroundColor="@color/itemBackgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tv_lesson_class_title"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_light"
+            android:lines="1"
+            android:visibility="gone"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_lesson_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/inter_light"
+            android:lines="1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_lesson_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1.8"
+            android:fontFamily="@font/inter_light"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="35dp"
+            android:padding="0dp"
+            android:layout_height="25dp"
+            android:background="@drawable/radius_border_green"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/cameraGreenBackgroundColor"
+            android:textSize="10sp"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="50dp"
+            android:padding="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="25dp"
+            android:background="@drawable/radius_border_red"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/splashScreenBackgroundColor"
+            android:textSize="10sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

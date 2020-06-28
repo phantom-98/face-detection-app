@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+
+            android:clickable="true"
+
+            android:src="@drawable/ic_menu_white"
+
+            android:background="@drawable/menu_bg"
+
+
+            />
+
+        <!--                    start of select camera-->
+
+
+        <LinearLayout
+            android:layout_toRightOf="@id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="4dp"
+
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/cam_setttings_bg"
+
+            android:paddingTop="2sp"
+            android:paddingBottom="2sp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_selectCamera"
+                android:layout_width="@dimen/camera_spinner_width"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+
+
+                android:background="@drawable/spinner_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_camera_select"
+                    style="@style/SpinnerText"
+                    android:text="Select Camera"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/spin_down" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/settings_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_action_settings"
+                android:paddingRight="5sp"
+                />
+
+            <ImageView
+                android:id="@+id/toogle_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="5dp"
+                app:srcCompat="@android:drawable/stat_notify_sync_noanim"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+
+        <!--                    end of select camera-->
+
+        <ImageView
+            android:id="@+id/iv_top_logo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/face_cool_name"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+
+            android:visibility="gone"
+            android:clickable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_menu"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:src="@drawable/facecoolicon" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

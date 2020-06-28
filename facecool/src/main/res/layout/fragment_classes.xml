@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_marginTop="?actionBarSize"
+    android:padding="10dp">
+
+    <EditText
+        android:layout_width="0dp"
+        android:id="@+id/search_for_class"
+        android:layout_height="40dp"
+        android:hint="@string/classes_search_for_class_hint"
+        android:fontFamily="@font/inter_medium"
+        android:paddingStart="10dp"
+        android:textColor="@color/primaryDarkColor"
+        android:paddingEnd="10dp"
+        android:lines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:background="@drawable/report_input_outline"
+        android:drawableEnd="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/classes_list_header_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/itemsToolbarBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_for_class">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_class_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/secondaryTextColor"
+                android:text="@string/id"
+                />
+
+            <TextView
+                android:id="@+id/item_class_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title"
+                android:textColor="@color/secondaryTextColor" />
+
+            <TextView
+                android:id="@+id/item_class_lesson"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.2"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/add_lesson_start_date"
+                android:textColor="@color/secondaryTextColor" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classes_class_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classes_list_header_container" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_class"
+        android:layout_width="wrap_content"
+        app:tint="@android:color/white"
+        android:tint="@android:color/white"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryAddButtonBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

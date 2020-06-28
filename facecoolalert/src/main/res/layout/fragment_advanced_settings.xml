@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cecece"
+    android:scrollbarSize="7dp"
+    android:scrollbarThumbHorizontal="@drawable/circle_blue_btn"
+    android:scrollbarThumbVertical="@drawable/circle_blue_btn"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/arrowleftblack" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/backButton"
+            android:text="@string/advancedsettings"
+            android:textColor="#333333"
+            android:textSize="20sp"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="23dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="14dp"
+
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/facecoolicon" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/verboseContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10sp"
+
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <CheckBox
+            android:id="@+id/detectionPropertiesVerboseMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/advanced_detection_properties"
+            android:padding="20dp"
+
+            />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/verboseContainer">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop" />
+    </LinearLayout>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingStart="16dp"-->
+<!--        android:paddingLeft="16dp"-->
+<!--        android:layout_marginTop="110dp"-->
+<!--        android:paddingEnd="16dp"-->
+<!--        android:paddingRight="16dp"-->
+<!--        android:paddingBottom="50dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/btn_save_cancel"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/header">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_rules"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+<!--            &lt;!&ndash; Dynamic content (rules) will be inserted here &ndash;&gt;-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btn_save_cancel"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="bottom"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/submit_button"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="#132558"-->
+<!--            android:text="Save"-->
+<!--            android:textColor="@android:color/white" />-->
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbarSize="7dp"
+    android:scrollbarThumbHorizontal="@drawable/circle_blue_btn"
+    android:scrollbarThumbVertical="@drawable/circle_blue_btn"
+    tools:context=".ui.subject.verification.VerificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+
+        </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@id/search_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+                    android:orientation="horizontal"
+                    android:background="@drawable/textinputborder"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:layout_below="@id/header"
+                    >
+
+                    <EditText
+                        android:id="@+id/search_logs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@null"
+                        android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+                        android:drawablePadding="16dp"
+                        android:hint="Search for Crash"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/logs_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@id/search_container"
+                    />
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

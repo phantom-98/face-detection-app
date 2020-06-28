@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ss">facecoolalert</string>
+    <string-array name="type_array">
+        <item> none </item>
+        <item> IP Camera</item>
+        <item> Wifi Camera</item>
+        <item> USB Camera</item>
+        <item> Android</item>
+        <item> Video file</item>
+        <item> Drone RC</item>
+        <item> Drone Streaming</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="cameras">
+        <item>Select Camera:</item>
+        <item>Camera 1:</item>
+        <item>Camera 2:</item>
+        <item>Camera 3:</item>
+        <item>Camera 4:</item>
+    </string-array>
+
+    <string-array name="resolution_array">
+        <item>720x480 (Standard)</item>
+        <item>1280x720 (HD)</item>
+        <item>1920x1080 (FullHD)</item>
+    </string-array>
+
+</resources>

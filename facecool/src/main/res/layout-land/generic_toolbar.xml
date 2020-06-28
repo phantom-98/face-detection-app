@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="0dp"
+    tools:showIn="@layout/activity_main">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:titleTextColor="@color/black"
+        app:subtitleTextColor="@color/black"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:id="@+id/camera_info_container"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:background="@drawable/radius_border">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/spin_bg"
+                    android:orientation="horizontal"
+                    android:paddingVertical="0dp"
+                    android:paddingStart="10dp">
+
+                    <TextView
+                        android:id="@+id/spinner_no_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:text="@string/no_classes"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/spinner_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="wrap_content"
+                        android:dropDownVerticalOffset="32dp"
+                        android:dropDownHorizontalOffset="-14dp"
+                        android:popupBackground="@drawable/spinner_popup_bg"
+                        android:padding="0dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/view_start_timer"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/spin_bg"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:id="@+id/iv_record_indicator"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/record_radio" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_record_info"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:text= "@string/start_tracking"
+                        android:textColor="@color/black" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/txtStartTime"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_gravity="center"-->
+                    <!--                    android:layout_marginLeft="5dp"-->
+                    <!--                    android:textColor="@color/white" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spin_bg"
+                    android:orientation="horizontal"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="10dp">
+                    <TextView
+                        android:id="@+id/in_out_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="4dp"
+                        android:text="@string/camera_screen_dialog_switch_in_mode_button"
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/face_cool_logo" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:id="@+id/cv_camera_mode"
+                app:cardCornerRadius="5dp"
+                android:layout_marginHorizontal="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/ic_camera_temp"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:id="@+id/cv_kiosk_mode"
+                app:cardCornerRadius="5dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:id="@+id/tv_kiosk_mode_switcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#00FF00"
+                    android:text="H"
+                    android:textSize="24sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

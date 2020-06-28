@@ -1,0 +1,301 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FaceCoolAlert</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="menu_live_camera">Live Camera</string>
+    <string name="menu_watchlist">Watchlists</string>
+    <string name="menu_subjects">Subjects</string>
+    <string name="menu_cameras">Cameras</string>
+    <string name="menu_alert">Alerts</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_profile">Profile</string>
+
+    <string name="classes_add_class_button">add class</string>
+    <string name="classes_search_for_class_hint">search for classes</string>
+    <string name="attendance_present">Present</string>
+    <string name="attendance_absent">Absent</string>
+    <string name="attendance_late">Late</string>
+
+    <string name="stop_tracking">Stop Tracking</string>
+    <string name="start_tracking">Start Tracking</string>
+
+    <string name="class_report_title">"Report for: %1$s"</string>
+    <string name="class_report_cvs_colum_labels">"%1$s , %2$s \n ID, First Name, Last Name"</string>
+    <string name="class_report_absent_label">"X"</string>
+    <string name="class_report_tab_title">by class</string>
+    <string name="class_report_class_list">Class List</string>
+
+    <string name="report_history_tab_title">History log</string>
+    <string name="report_history_dialog_warning_delete_item">Are you sure you want to delete this record?</string>
+    <string name="report_screen_title">Reports</string>
+
+    <string name="dialog_alert_cancel_button">cancel</string>
+    <string name="dialog_alert_accept_button">accept</string>
+
+    <string name="classes_screen_title">Classes</string>
+    <string name="classes_dialog_warning_class_delete">Are you sure you want to delete this class?</string>
+    <string name="class_details_title">"%1$s Details"</string>
+    <string name="camera_screen_unidentified_label">Unidentified</string>
+    <string name="camera_screen_tracking_started">Tracking Started</string>
+    <string name="camera_screen_dialog_switch_in_out_mode_body">Switch in/out mode?</string>
+    <string name="camera_screen_dialog_switch_out_mode_button">Out</string>
+    <string name="camera_screen_dialog_switch_in_mode_button">In</string>
+    <string name="camera_screen_title">Camera</string>
+    <string name="settings_export_users">Export</string>
+    <string name="settings_import_users">Import</string>
+    <string name="nav_students">Students</string>
+    <string name="title_activity_enroll_subject">EnrollSubject</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="enrollment_methods">Enrollment methods</string>
+    <string name="multi_enrollment">Multi Enrollment</string>
+    <string name="single_subject">Single Subject</string>
+    <string name="cancel">Cancel</string>
+    <string name="first_name">First Name</string>
+    <string name="id">ID</string>
+    <string name="address">Address</string>
+    <string name="enroll_new_subject">Enroll New Subject</string>
+    <string name="subject_card">Subject Card</string>
+    <string name="save">SAVE</string>
+    <string name="verification">Verification</string>
+    <string name="visits">Visits</string>
+    <string name="delete">delete</string>
+    <string name="automatic_enroll">Auto enrollment</string>
+    <string name="auto_scroll">Auto scroll to enrollment progress</string>
+    <string name="add_new_user_activity_close_button">Close</string>
+    <string name="add_new_user_activity_start_button">Start</string>
+    <string name="cancel_dialog">CANCEL</string>
+    <string name="accept_dialog">ACCEPT</string>
+    <string name="enroll">ENROLL</string>
+    <string name="verificationlabel">Verification</string>
+    <string name="blank">--</string>
+    <string name="statuslabel">Status:</string>
+    <string name="scorelabel">Score:</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settingslabel">Settings</string>
+    <string name="advancedsettings">Advanced Settings</string>
+    <string name="generalSettings">General</string>
+    <string name="camerasettings">Camera</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="visit_log">Face Log</string>
+    <string name="filter">Filter</string>
+
+
+    <string name="welcome_back">Welcome back</string>
+    <string name="create_account_title">Lets Create Your Account</string>
+
+    <string name="start_without_account_title">Start using app without any account</string>
+    <string name="create_account_title_again">New Here ?, Create Account</string>
+    <string name="already_have_account">Already have an account? Go to Login</string>
+    <string name="create_account">Create new Account</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Repeat-password</string>
+    <string name="email">Email</string>
+
+
+    <string-array name="show_options">
+        <item>All</item>
+        <item>Unidentified</item>
+        <item>Identified</item>
+    </string-array>
+
+    <string-array name="time_options">
+        <item>Custom</item>
+        <item>15 Minutes</item>
+        <item>1 Hour</item>
+        <item>1 Day</item>
+    </string-array>
+
+
+    <string name="show_prompt">Select Show</string>
+    <string name="time_prompt">Select Time</string>
+    <string name="alerts">Alerts</string>
+
+
+    <!-- Service Options -->
+    <string-array name="service_options">
+        <item>None</item>
+        <item>Gmail</item>
+        <item>Yahoo Mail</item>
+        <item>Outlook</item>
+        <item>Apple Mail</item>
+        <item>Custom SMTP Server</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Encryption Options -->
+    <string-array name="encryption_options">
+        <item>None (No Encryption)</item>
+        <item>SSL (Secure Sockets Layer)</item>
+        <item>TLS (Transport Layer Security)</item>
+        <item>STARTTLS</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string name="help_title">Help</string>
+    <string name="help_support_email">support@face-six.com</string>
+    <string name="help_support_msg">Support Needed for: FaceCoolAlert android app</string>
+    <string name="help_choose_email_provider">Send Email Using: </string>
+
+    <string name="how_to_help">How can we help you?</string>
+    <string name="we_can_help">It looks like you\'re experiencing some issues with your account. We\'re here to help!</string>
+    <string name="email_us">Email us</string>
+    <string name="change_folder">Change Folder</string>
+    <string name="app_database_export_import">App Database Export/Import</string>
+    <string name="first_name_label">First Name</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="enter_id">Enter ID</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="address_label">Address</string>
+    <string name="enter_watchlist">Enter Watchlist</string>
+    <string name="watchlist_lebel">Watchlist</string>
+    <string name="subject_visits">Subject Visits</string>
+    <string name="subjects_number"># Subjects</string>
+    <string name="created">created</string>
+    <string name="type">Type</string>
+    <string name="name">Name</string>
+    <string name="ref_photo">Ref Photo</string>
+    <string name="alert_name_header">Alert Name</string>
+    <string name="sms_number">SMS Number</string>
+    <string name="email_lable">Email</string>
+    <string name="name_label">Name</string>
+    <string name="login_error_too_many_request">too many attempts to login</string>
+    <string name="login_error_user_not_found">No user with this email found</string>
+    <string name="login_error_unknown">something went wrong, please try again</string>
+    <string name="login_error_password_length">password mut be at least 6 characters</string>
+    <string name="login_error_password_confirm">password does not match</string>
+    <string name="login_title">LOGIN</string>
+
+
+    <string-array name="recognition_modes">
+        <item>Best Match</item>
+        <item>First Match</item>
+    </string-array>
+
+    <string name="terms_and_conditions_body">
+        "Terms and Conditions\n" +
+                "\n" +
+                "Welcome to Face Cool!\n" +
+                "\n" +
+                "These terms and conditions outline the rules and regulations for the use of Face Cool, an android app that helps students track their study time using face recognition technology.\n" +
+                "\n" +
+                "By accessing this app, you agree to be bound by these terms and conditions. If you disagree with any part of these terms and conditions, please do not use our app.\n" +
+                "\n" +
+                "The following terminology applies to these Terms and Conditions: \"You\" and \"Your\" refers to you, the person using this app. \"We\", \"Us\" and \"Our\" refers to Face Cool, the provider of this app. \"App\" refers to Face Cool.\n" +
+                "\n" +
+                "License\n" +
+                "\n" +
+                "We grant you a limited, non-exclusive, non-transferable license to download, install and use our app on your mobile device for your personal use only.\n" +
+                "\n" +
+                "You agree not to copy, modify, distribute, sell or lease any part of our app or its content without our prior written consent.\n" +
+                "\n" +
+                "You agree not to reverse engineer or attempt to extract the source code of our app or any software components that are part of it.\n" +
+                "\n" +
+                "You agree not to use our app for any illegal or unauthorized purpose or in any way that violates any laws or regulations.\n" +
+                "\n" +
+                "You agree not to interfere with or disrupt the operation of our app or its servers or networks.\n" +
+                "\n" +
+                "You agree not to upload or transmit any viruses, malware or other harmful code through our app.\n" +
+                "\n" +
+                "Face Recognition\n" +
+                "\n" +
+                "Our app uses face recognition technology to verify your identity and track your study time. By using our app, you consent to us collecting, storing and processing your facial data for this purpose only.\n" +
+                "\n" +
+                "We do not share your facial data with any third parties without your consent unless required by law.\n" +
+                "\n" +
+                "We use reasonable security measures to protect your facial data from unauthorized access, use or disclosure. However, we cannot guarantee that our app is completely secure or error-free. You acknowledge that you use our app at your own risk.\n" +
+                "\n" +
+                "You can delete your facial data from our app at any time by deleting your account. However, we may retain some of your facial data for legal purposes as long as necessary.\n" +
+                "\n" +
+                "Account\n" +
+                "\n" +
+                "To use some features of our app, you may need to create an account with us. You are responsible for maintaining the confidentiality of your account details and password. You are also responsible for all activities that occur under your account.\n" +
+                "\n" +
+                "You agree not to create more than one account per person or device without our permission.\n" +
+                "\n" +
+                "You agree not to create an account using false information or impersonating someone else.\n" +
+                "\n" +
+                "You agree not to transfer your account to anyone else without our prior written consent.\n" +
+                "\n" +
+                "We reserve the right to suspend or terminate your account at any time if we suspect that you have violated these terms and conditions or any applicable laws or regulations.\n" +
+                "\n" +
+                "Payment\n" +
+                "\n" +
+                "Some features of our app may require payment. You agree to pay all fees and charges associated with such features as displayed on our app at the time of purchase.\n" +
+                "\n" +
+                "All payments are processed by third-party payment providers such as Google Play Store. We are not responsible for their services or policies. You should review their terms and conditions before making any payments through them.\n" +
+                "\n" +
+                "All payments are final and non-refundable unless otherwise stated by us in writing.\n" +
+                "\n" +
+                "We reserve the right to change the prices of any features at any time without notice. However, such changes will not affect any purchases made before the date of change.\n" +
+                "\n" +
+                "\n" +
+                "Disclaimer\n" +
+                "\n" +
+                "Our app is provided on an \"as is\" and \"as available\" basis without warranties of any kind either express\n" +
+                "or implied including but not limited\n" +
+                "to warranties\n" +
+                "of merchantability fitness\n" +
+                "for a particular purpose non-infringement\n" +
+                "or compatibility We do\n" +
+                "not warrant that\n" +
+                "our \n" +
+                "app will be uninterrupted error-free secure accurate reliable complete suitable \n" +
+                "or up-to-date We do \n" +
+                "not warrant that \n" +
+                "our \n" +
+                "app will meet \n" +
+                "your expectations requirements needs preferences goals objectives standards expectations outcomes achievements results targets desires demands hopes wishes aspirations ambitions plans strategies intentions designs purposes motives aims ends scopes directions courses projects schemes blueprints outlines frameworks models patterns methods approaches ways modes means methods techniques procedures processes systems operations functions mechanisms workings performances behaviors actions deeds activities tasks undertakings endeavors efforts enterprises ventures experiments trials tests examinations investigations researches studies analyses inquiries inquiries queries questions requests solicitations petitions applications submissions proposals bids tenders offers contracts agreements arrangements deals transactions settlements negotiations mediations arbitrations conciliations compromises reconciliations accommodations adjustments adaptations modifications alterations changes transformations variations conversions revisions amendments corrections improvements enhancements refinements developments advancements progressions evolutions"
+    </string>
+    <string name="login_signup_title">SIGN_UP</string>
+    <string name="login_form_title">Login to Your Account</string>
+    <string name="fullname">Full Name</string>
+    <string name="accept_terms_conditions">Accept terms and conditions</string>
+    <string name="register_error_email_already_in_use">Email Already Exists</string>
+    <string name="read_terms_and_conditions">Read Terms And Conditions</string>
+    <string name="app_logs">App Logs</string>
+    <string name="crash_logs">Crash Logs</string>
+    <string name="other_logs">Other Logs</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="matching_threshold">Matching Threshold :</string>
+    <string name="enrollment_quality_threshold">Enrollment Quality Threshold :</string>
+    <string name="recognition_quality_threshold">Image Quality Threshold :</string>
+    <string name="label">Label : </string>
+    <string name="percent">%</string>
+    <string name="quality_0_0">Quality: 0.0%</string>
+
+    <string name="additional_settings">Additional Settings</string>
+    <string name="history_export_by_date">History Export By Date</string>
+    <string name="from_time">From Time</string>
+    <string name="delete_after_export">Delete After Export</string>
+    <string name="to_time">To Time</string>
+    <string name="export_upto">Export upto</string>
+    <string name="close">Close</string>
+    <string name="save_image">Save</string>
+    <string name="advanced_detection_properties">Advanced Detection Properties</string>
+    <string name="email_settings">Email Settings</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_your_password">Reset Your Password</string>
+    <string name="back_to_login">Back To Login</string>
+    <string name="filter_faces_by_quality">Filter Faces By Quality</string>
+    <string name="face_log_export_import">Face Log Export/Import</string>
+    <string name="delete_all_subjects">Delete All Subjects</string>
+    <string name="delete_face_log">Delete Face Log</string>
+    <string name="alert_s_log">Alert\'s Log</string>
+    <string name="distribution">Distribution</string>
+    <string name="subscribers">Subscribers</string>
+
+</resources>

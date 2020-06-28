@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/enrollment_method_background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <TextView
+
+        android:id="@+id/dialog_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+
+        android:text="@string/enrollment_methods"
+        android:textColor="@color/black"
+        android:gravity="center"
+
+
+
+        />
+
+
+
+    <Button
+        android:id="@+id/buttonSingleEnrollment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="#132558"
+        android:text="@string/single_subject"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonFolderEnrollment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CF203C"
+
+        android:text="@string/multi_enrollment"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EBEBEB"
+        android:text="@string/cancel"
+        android:textColor="#4D4D4D" />
+
+</LinearLayout>

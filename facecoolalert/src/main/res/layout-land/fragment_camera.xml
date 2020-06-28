@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cameras_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_frame_cameras"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/camera_border"
+                app:layout_constraintBottom_toTopOf="@+id/latest_detected_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="2dp"
+                >
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/toolbar_container"
+                layout="@layout/generic_toolbar"
+                android:background="@android:color/transparent"
+
+                />
+<!--            start of toolbar-->
+            <RelativeLayout
+                android:id="@+id/placeholder1"
+                android:layout_width="254dp"
+                android:layout_height="39dp"
+                android:layout_margin="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                tools:ignore="MissingDefaultResource"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_left"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="0dp"
+
+                        android:clickable="true"
+
+                        android:src="@drawable/ic_menu"
+                        android:background="@android:color/transparent"
+
+                        />
+
+<!--                    start of select camera-->
+
+
+                    <LinearLayout
+                        android:layout_toRightOf="@id/iv_left"
+                        android:layout_width="254dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="14dp"
+
+                        android:layout_marginEnd="4dp"
+
+
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/layout_selectCamera"
+                            android:layout_width="@dimen/camera_spinner_width"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="30dp"
+
+
+                            android:background="@drawable/spinner_bg"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_camera_select"
+                                style="@style/SpinnerText"
+                                android:text="Select Camera" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/spin_down" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/settings_action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_action_settings" />
+                    </LinearLayout>
+
+
+<!--                    end of select camera-->
+
+                    <ImageView
+                        android:id="@+id/iv_top_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:src="@drawable/face_cool_name"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_right"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_menu"
+                        android:background="@android:color/transparent"
+                        />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="19dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:src="@drawable/facecoolicon" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+<!--            end of toolbar-->
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/latest_detected_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_latest_identified_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="6dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/historyStrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/currentPreview"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+
+                        >
+                        
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            >
+
+                        <LinearLayout
+                            android:id="@+id/selectViewMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/mode1"
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                android:padding="3sp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/mode1_icon"
+
+                                android:text="mode1" />
+<!--                            <Space-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                />-->
+                            <ImageView
+                                android:id="@+id/mode2"
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="mode2"
+                                android:layout_weight="1"
+                                android:src="@drawable/mode2_icon"
+                                android:padding="3sp"
+
+                                />
+
+
+                        </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/currentCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            app:cardBackgroundColor="@color/detection_card_color"
+                            android:background="@color/detection_card_color"
+                            android:backgroundTint="#008B00"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1sp"
+                                android:background="@color/cardview_light_background"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/image_camera_detection"
+                                    android:layout_width="78dp"
+                                    android:layout_height="78dp"
+
+                                    android:duplicateParentState="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/person"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_user_name"
+                                    android:layout_width="wrap_content"
+                                    android:maxWidth="78dp"
+                                    android:layout_height="16dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_gravity="bottom|left"
+
+                                    android:background="@color/cardview_light_background"
+
+                                    android:duplicateParentState="true"
+                                    android:fontFamily="@font/inter_light"
+                                    android:gravity="center"
+
+                                    android:text=""
+                                    android:textColor="#008B00"
+                                    android:textSize="10sp"
+                                    android:paddingLeft="3dp"
+                                    android:paddingRight="3dp"
+
+                                    android:singleLine="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+
+                                    />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/referenceCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            app:cardBackgroundColor="@color/detection_card_color"
+                            android:backgroundTint="#008B00"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1sp"
+                                android:background="@color/cardview_light_background"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/refimage_camera_detection"
+                                    android:layout_width="78dp"
+                                    android:layout_height="78dp"
+
+                                    android:duplicateParentState="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/person"
+                                    />
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_toRightOf="@id/currentPreview"
+                        android:id="@+id/rv_detected_faces_list"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:layout_alignParentEnd="true"
+                        android:paddingTop="5dp"
+
+                        />
+                </RelativeLayout>
+
+<!--            </androidx.core.widget.NestedScrollView>-->
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_window"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone"
+            android:paddingTop="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/popup_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/general_progress"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

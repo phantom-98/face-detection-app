@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    tools:context=".ui.students.details.StudentEnrolledClassesFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/student_classes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_enrolled_classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECF1FF"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:backgroundTint="#898484"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/attendance"
+            android:textSize="12sp" />
+
+
+    </FrameLayout>
+
+
+    <TextView
+        style="@style/text_enroll_label"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/notes"
+        android:textSize="21sp"
+        android:visibility="gone" />
+
+    <EditText
+        style="@style/btn_enroll_input"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="top"
+        android:hint="@string/notes"
+        android:paddingTop="5dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+
+
+        <TextView
+            style="@style/text_enroll_label"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/parent_notification"
+            android:textSize="21sp" />
+
+        <CheckBox
+            android:id="@+id/check_box_parent_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <EditText
+        style="@style/btn_enroll_input"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="top"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingTop="5dp"
+        android:visibility="gone" />
+
+</FrameLayout>

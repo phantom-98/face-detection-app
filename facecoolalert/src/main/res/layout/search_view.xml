@@ -1,0 +1,56 @@
+<!-- res/layout/view_watchlist_assignment.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Start of search field -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textinputborder"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/search_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+            android:drawablePadding="5dp"
+            android:hint="Search Name or ID"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+    <!-- End of search field -->
+
+    <CheckBox
+        android:id="@+id/assignall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Select All"
+        android:textColor="#132558"
+        android:textSize="11sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        >
+
+        <ListView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true" />
+
+    </LinearLayout>
+</LinearLayout>

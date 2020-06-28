@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:id="@+id/iv_top_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/face_cool_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/iv_left"
+                    android:text="Watchlist"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:srcCompat="@drawable/facecoolicon" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="#F5F5F5"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_container"
+            tools:ignore="MissingConstraints">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/savecancel"
+                android:descendantFocusability="beforeDescendants"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add New Watchlist"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/deleteIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_trash"
+                            android:layout_alignParentRight="true"
+                            android:visibility="gone"
+
+                            />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10sp"
+                        android:layout_margin="4sp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:layout_margin="4sp"
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    >
+                                    <!--        start of a field-->
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:boxBackgroundMode="outline"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        app:boxCornerRadiusTopEnd="10dp"
+                                        app:boxCornerRadiusTopStart="10dp"
+                                        app:boxCornerRadiusBottomStart="10dp"
+                                        app:boxCornerRadiusBottomEnd="10dp"
+
+                                        >
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Enter Name" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <!--        end of a field-->
+
+
+
+                                </LinearLayout>
+
+                                <Space
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"/>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <!--        start of a field-->
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:boxBackgroundMode="outline"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        app:boxCornerRadiusTopEnd="10dp"
+                                        app:boxCornerRadiusTopStart="10dp"
+                                        app:boxCornerRadiusBottomStart="10dp"
+                                        app:boxCornerRadiusBottomEnd="10dp"
+
+                                        >
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/type"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Enter Type" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <!--        end of a field-->
+
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                            <!--        start of a field-->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                android:layout_marginTop="10dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/note"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Note" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!--        end of a field-->
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        app:cardCornerRadius="10sp"
+                        android:layout_margin="4sp"
+                        >
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+
+                            >
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Assign to Watchlist :"
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                />
+
+<!--                            start of search field-->
+
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textinputborder"
+                                android:padding="10dp"
+                                >
+                                <EditText
+                                    android:id="@+id/search_subjects"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@null"
+                                    android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+                                    android:drawablePadding="5dp"
+                                    android:hint="Search Name or ID"
+
+
+                                    />
+                            </LinearLayout>
+
+<!--                            end of search field-->
+
+                            <CheckBox
+                                android:id="@+id/assignall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Assign All"
+                                android:textColor="#132558"
+                                />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    >
+
+                                <ListView
+                                    android:id="@+id/recycleView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="true"
+
+                                    />
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/savecancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="100"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+
+                    >
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:backgroundTint="#EBEBEB"
+                        android:padding="10dp"
+                        android:text="CANCEL"
+                        android:textColor="#4D4D4D"
+
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70" />
+
+
+                    <Button
+                        android:id="@+id/submitbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:backgroundTint="#CF203C"
+                        android:padding="10dp"
+                        android:text="SAVE"
+                        android:textColor="@color/white"
+
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+
+
+

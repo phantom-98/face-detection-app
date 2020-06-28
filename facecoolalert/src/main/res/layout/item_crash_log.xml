@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10sp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+
+            >
+
+        <RelativeLayout
+            android:id="@+id/logButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/log_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/black"
+                android:text="log title"
+                android:layout_toLeftOf="@id/dateLayout"
+                android:layout_marginTop="5sp"
+                />
+
+            <LinearLayout
+                android:id="@+id/dateLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:id="@+id/crash_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="22/02/2000"
+                    android:textColor="#333333"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/crash_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00:00:01"
+                    android:textColor="#333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/logDetails"
+                android:visibility="gone"
+                >
+                        <RelativeLayout
+                            android:id="@+id/logHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <TextView
+                                android:id="@+id/crlabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="StackTrace"
+                                android:layout_toLeftOf="@id/uploadLog"
+                                android:layout_marginTop="10sp"
+                                />
+
+                            <Button
+                                android:id="@+id/uploadLog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload Log"
+                                android:layout_alignParentEnd="true"
+                                />
+
+                        </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/contentScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logHeader"
+                    >
+                    <TextView
+                        android:id="@+id/logContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="content value"
+
+                        android:padding="10sp"
+                        android:textColor="#132558"
+
+                        />
+
+                </HorizontalScrollView>
+                        <TextView
+                            android:id="@+id/resourcesHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Resources Status"
+                            android:layout_marginTop="15sp"
+                            android:layout_below="@id/contentScrollView"
+                            />
+
+                <TextView
+                    android:id="@+id/logResources"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resources value"
+                    android:layout_below="@id/resourcesHeader"
+                    android:padding="10sp"
+                    android:textColor="#132558"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

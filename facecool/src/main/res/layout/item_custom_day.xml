@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="@color/secondaryItemBackgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_time" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_custom_day"
+                android:layout_width="160dp"
+                android:layout_height="32dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@drawable/input_bkg_primary"
+                android:layout_marginBottom="12dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/et_start_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="32dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/input_bkg_primary"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_lesson_to"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:id="@+id/et_end_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="32dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/input_bkg_primary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/ib_remove"
+                android:background="#00000000"
+                android:src="@drawable/icon_minus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/ib_add"
+                android:background="#00000000"
+                android:src="@drawable/icon_plus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

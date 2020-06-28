@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbarSize="7dp"
+    android:scrollbarThumbHorizontal="@drawable/circle_blue_btn"
+    android:scrollbarThumbVertical="@drawable/circle_blue_btn"
+    tools:context=".ui.subject.verification.VerificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backButton"
+                android:padding="18dp"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/arrowleftblack"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/backButton"
+                android:paddingTop="5dp"
+                android:text="App Database Import/Export"
+                android:textColor="#333333"
+
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="23dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentRight="true"
+
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/facecoolicon" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@id/header"
+            android:background="#CFECECEC"
+            android:foregroundGravity="center_vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="10sp"
+                >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="visible"
+
+
+                >
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />
+                <Button
+
+                    android:id="@+id/exportappDatabase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Export App Database"
+                    android:backgroundTint="#CF203C"
+
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/exportProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0"
+                    android:visibility="invisible"
+                    />
+
+
+
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    />
+
+                <Button
+
+                    android:id="@+id/importappDatabase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Import App Database"
+
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/importProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0"
+                    android:visibility="invisible"
+                    />
+
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="camera_spinner_width">140dp</dimen>
+    <dimen name="camera_spinner_margin">4dp</dimen>
+    <dimen name="item_root_padding">5dp</dimen>
+    <dimen name="item_root_margin">15dp</dimen>
+    <dimen name="detection_item_height">80dp</dimen>
+    <dimen name="detection_item_margin">2dp</dimen>
+    <dimen name="detection_half_item_height">55dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

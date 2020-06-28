@@ -1,0 +1,45 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+/gradlew.bat
+/app/.DS_Store
+design/.DS_Store
+.DS_Store
+/facecoolalert/release
+build/kotlin
+build.gradle
+cmake*
+libncnn.a
+*libncnn.a
+facedetection-java/src/main/jniLibs/x86_64/libncnn.a
+facedetection-java/src/main/jniLibs/x86/libncnn.a

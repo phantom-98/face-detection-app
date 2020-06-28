@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card"
+        android:layout_width="101dp"
+        android:layout_height="101dp">
+
+        <ImageView
+            android:id="@+id/image_camera_detection"
+            android:layout_width="match_parent"
+            android:layout_margin="1dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img"/>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/enrollmentBackgroundColor2"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_container"
+            layout="@layout/generic_toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_error_list"
+            android:background="@color/enrollmentBackgroundColor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/enrollmentBackgroundColor1"
+                app:layout_constraintBottom_toBottomOf="@+id/guide_line_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/student_image_container"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guide_line_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guide_line_bottom">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rotation="0"
+                    android:rotationX="0"
+                    android:rotationY="0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img" />
+
+                <ProgressBar
+                    android:id="@+id/image_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/edit_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|bottom"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:visibility="gone" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/first_name"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/student_image_container" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/student_image_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/image_quality"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_image_quality"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/student_name"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/student_image_container">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/student_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="-15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="65dp"
+                        android:layout_marginTop="2dp">
+                        <TextView
+                            style="@style/twin_text_enroll"/>
+                        <CheckBox
+                            android:id="@+id/ckbx_twin"
+                            style="@style/twin_checkbox_enroll"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="65dp"
+                        android:layout_marginTop="12dp">
+                        <TextView
+                            style="@style/twin_text_enroll"
+                            android:text="@string/parent_notification"/>
+                        <CheckBox
+                            android:id="@+id/checkbox_parent"
+                            style="@style/twin_checkbox_enroll"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/checkbox_sms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/white"
+                            android:textColor="@color/white"
+                            android:text="@string/parent_sms_enable"/>
+                        <CheckBox
+                            android:id="@+id/checkbox_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/white"
+                            android:textColor="@color/white"
+                            android:text="@string/parent_email_enable"/>
+                        <CheckBox
+                            android:id="@+id/checkbox_whatsapp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/white"
+                            android:textColor="@color/white"
+                            android:text="@string/parent_whatsapp_enable"/>
+                        <CheckBox
+                            android:id="@+id/checkbox_all"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/white"
+                            android:textColor="@color/white"
+                            android:text="@string/parent_all_enable"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/parent_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="-15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/student_tab_layout"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabBackground="@drawable/tab_color_selector"
+                        app:tabTextColor="@color/black"
+                        app:tabIndicatorHeight="0dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/student_view_pager"
+                        android:background="@color/white"
+                        android:padding="5dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/student_classes_label"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:fontFamily="@font/inter_medium"-->
+<!--                        android:text="@string/enrolled_classes"-->
+<!--                        android:textColor="@color/secondaryTextColor"-->
+<!--                        android:textSize="21sp" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/student_classes"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginEnd="15dp" />-->
+
+<!--                    <ProgressBar-->
+<!--                        android:id="@+id/progress_enrolled_classes"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginEnd="15dp"-->
+<!--                        android:visibility="gone" />-->
+
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#ECF1FF"-->
+<!--                        android:visibility="gone">-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_attendance"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_margin="12dp"-->
+<!--                            android:backgroundTint="#898484"-->
+<!--                            android:fontFamily="@font/inter_medium"-->
+<!--                            android:text="@string/attendance"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                    </FrameLayout>-->
+
+
+<!--                    <TextView-->
+<!--                        style="@style/text_enroll_label"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/notes"-->
+<!--                        android:textSize="21sp"-->
+<!--                        android:visibility="gone" />-->
+
+<!--                    <EditText-->
+<!--                        style="@style/btn_enroll_input"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:layout_marginStart="20dp"-->
+<!--                        android:layout_marginEnd="20dp"-->
+<!--                        android:layout_marginBottom="30dp"-->
+<!--                        android:gravity="top"-->
+<!--                        android:hint="@string/notes"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:visibility="gone" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:visibility="gone">-->
+
+
+<!--                        <TextView-->
+<!--                            style="@style/text_enroll_label"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_marginTop="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:text="@string/parent_notification"-->
+<!--                            android:textSize="21sp" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/check_box_parent_email"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <EditText-->
+<!--                        style="@style/btn_enroll_input"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:layout_marginStart="20dp"-->
+<!--                        android:layout_marginEnd="20dp"-->
+<!--                        android:layout_marginBottom="30dp"-->
+<!--                        android:gravity="top"-->
+<!--                        android:hint="@string/email"-->
+<!--                        android:inputType="textEmailAddress"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:visibility="gone" />-->
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

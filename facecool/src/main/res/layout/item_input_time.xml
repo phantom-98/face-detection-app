@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:showIn="@layout/item_custom_day">
+
+    <TextView
+        android:id="@+id/tv_day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:lines="1"
+        android:text="@string/monday"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/tv_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_light"
+        android:lines="1"
+        android:text="@string/add_lesson_start_time"
+        android:textColor="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_start_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_gravity="center"
+            android:background="@drawable/input_bkg_primary"
+            android:gravity="center"
+            android:hint="00"
+            android:inputType="number"
+            android:maxLength="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text=":"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/et_end_time"
+            android:layout_width="40dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/input_bkg_primary"
+            android:gravity="center"
+            android:hint="00"
+            android:maxLength="2"
+            android:inputType="number"/>
+
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:id="@+id/cb_all_day"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/all_day"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

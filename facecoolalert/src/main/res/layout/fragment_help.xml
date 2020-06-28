@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:id="@+id/iv_top_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/face_cool_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/iv_left"
+                    android:text="@string/help_title"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:srcCompat="@drawable/facecoolicon" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="?actionBarSize"
+            >
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:background="@color/backgroundColor"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:src="@drawable/onboarding_page_3_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/how_to_help"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/titleTextColor"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:text="@string/we_can_help"
+                android:textColor="@color/titleTextColor"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_bkg_primary"
+                android:paddingEnd="10dp"
+                android:paddingStart="30dp"
+                app:backgroundTint="@null"
+                android:id="@+id/btn_send_help_email"
+                android:text="@string/email_us"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_medium"
+                android:drawableEnd="@android:drawable/sym_action_email"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+
+
+

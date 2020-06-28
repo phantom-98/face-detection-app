@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:id="@+id/iv_top_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/face_cool_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/circle_btn"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/iv_left"
+                    android:text="Search"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:srcCompat="@drawable/facecoolicon" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_container"
+            android:layout_marginTop="60dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                >
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/initSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="262dp"
+                    android:padding="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:shadowColor="@color/black"
+                    android:visibility="visible"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#E6E6E6"
+                        android:gravity="center"
+                        android:layout_margin="20dp"
+
+
+                        >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+
+                        android:src="@drawable/image"
+                        >
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Photo(s)"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchResults"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+
+
+                    >
+                    <RelativeLayout
+                        android:id="@id/search_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal"
+                        android:background="@drawable/textinputborder"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="MissingConstraints
+">
+
+                        <EditText
+                            android:id="@+id/search_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@null"
+                            android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+                            android:drawablePadding="16dp"
+                            android:hint="New Search"
+                            android:focusable="false"
+                            android:clickable="true"
+
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                </androidx.cardview.widget.CardView>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:progress="0"
+                    android:progressBackgroundTint="#132558"
+                    android:progressTint="#132558" />
+
+                    <TextView
+                        android:id="@+id/progress_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="0 Files Uploaded"
+                        android:textColor="#000000" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F5F5F5"
+                    app:cardCornerRadius="5sp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+<!--                        start of a view-->
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/matches"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardCornerRadius="5sp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="5sp"
+                                >
+
+                            <Button
+                                android:id="@+id/matchesButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:drawableLeft="@drawable/profile_tick"
+                                android:drawableRight="@drawable/spinner_down"
+                                android:padding="20dp"
+                                android:text="Matches Found 0"
+                                android:textColor="#000000"
+                                android:layout_margin="2dp"
+
+                                />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/matchesRecycleView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:nestedScrollingEnabled="true" />
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+<!--                        end of first view-->
+
+
+                        <!--                        start of a view-->
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/nomatches"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_margin="5sp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="5sp"
+                                >
+
+                                <Button
+                                    android:id="@+id/nomatchesButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@android:color/transparent"
+                                    android:drawableLeft="@drawable/profiledelete"
+                                    android:drawableRight="@drawable/spinner_down"
+                                    android:padding="20dp"
+                                    android:text="No Match Found 0"
+                                    android:textColor="#000000"
+
+                                    />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/nomatchesRecycleView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:nestedScrollingEnabled="false" />
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                        end of first view-->
+
+
+                        <!--                        start of a view-->
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rejected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_margin="5sp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="5sp"
+                                >
+
+                                <Button
+                                    android:id="@+id/rejectedButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@android:color/transparent"
+                                    android:drawableLeft="@drawable/danger"
+                                    android:drawableRight="@drawable/spinner_down"
+                                    android:padding="20dp"
+                                    android:text="Rejected Images 0"
+                                    android:textColor="#000000"
+
+                                    />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rejectedRecycleView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:nestedScrollingEnabled="false" />
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                        end of  view-->
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+
+
+

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_root_padding">5dp</dimen>
+    <dimen name="item_root_margin">15dp</dimen>
+</resources>

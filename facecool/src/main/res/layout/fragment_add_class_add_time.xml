@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="-40dp"
+        app:cardBackgroundColor="@color/addBackgroundColor"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:paddingStart="5dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="50dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!--     repeat type   -->
+                        <TextView
+                            android:id="@+id/name_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_lesson_repeat_type"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/spinner_repeat"
+                            app:layout_constraintStart_toStartOf="@id/spinner_repeat"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/icon_name"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_repeat"
+                            app:layout_constraintEnd_toStartOf="@id/spinner_repeat"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_repeat"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/inputTextBackgroundColor"
+                            android:padding="5dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/icon_name"
+                            app:layout_constraintTop_toTopOf="@+id/icon_name" />
+
+                        <!-- week list           -->
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/week_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/spinner_repeat"
+                            app:layout_constraintStart_toStartOf="@+id/spinner_repeat"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_repeat" />
+
+                        <TextView
+                            android:id="@+id/kiosk_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_lesson_kiosk"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="15dp"
+                            app:layout_constraintStart_toStartOf="@+id/name_label"
+                            app:layout_constraintTop_toBottomOf="@+id/week_list"/>
+                        <ImageView
+                            android:id="@+id/icon_kiosk"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_kiosk_mode"
+                            app:layout_constraintEnd_toEndOf="@+id/icon_name"
+                            app:layout_constraintStart_toStartOf="@id/icon_name"
+                            app:layout_constraintTop_toBottomOf="@id/kiosk_label" />
+                        <CheckBox
+                            android:id="@+id/checkbox_lesson_kiosk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/twin_checkbox_enroll"
+                            android:scaleX="2"
+                            android:scaleY="2"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="5dp"
+                            app:layout_constraintStart_toStartOf="@+id/spinner_repeat"
+                            app:layout_constraintTop_toTopOf="@+id/icon_kiosk"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_kiosk"/>
+
+                        <TextView
+                            android:id="@+id/liveness_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_lesson_liveness"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="32dp"
+                            app:layout_constraintStart_toEndOf="@+id/kiosk_label"
+                            app:layout_constraintTop_toTopOf="@+id/kiosk_label"/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_lesson_liveness"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/twin_checkbox_enroll"
+                            android:scaleX="2"
+                            android:scaleY="2"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="5dp"
+                            app:layout_constraintStart_toStartOf="@+id/liveness_label"
+                            app:layout_constraintTop_toTopOf="@+id/icon_kiosk"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_kiosk"/>
+                        <!--    date    -->
+
+                        <TextView
+                            android:id="@+id/date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/add_lesson_date"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="@id/name_label"
+                            app:layout_constraintTop_toBottomOf="@+id/icon_kiosk" />
+
+                        <ImageView
+                            android:id="@+id/icon_date"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_date"
+                            app:layout_constraintEnd_toEndOf="@+id/icon_name"
+                            app:layout_constraintStart_toStartOf="@id/icon_name"
+                            app:layout_constraintTop_toBottomOf="@id/date_label" />
+
+                        <TextView
+                            android:id="@+id/input_start_date"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+                            android:hint="@string/add_lesson_start_date"
+                            android:padding="2dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_date"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toStartOf="@+id/date_to_label"
+                            app:layout_constraintStart_toStartOf="@+id/spinner_repeat"
+                            app:layout_constraintTop_toTopOf="@+id/icon_date" />
+
+                        <TextView
+                            android:id="@+id/date_to_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/add_lesson_to"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/input_start_date"
+                            app:layout_constraintEnd_toStartOf="@+id/input_end_date"
+                            app:layout_constraintStart_toEndOf="@+id/input_start_date"
+                            app:layout_constraintTop_toTopOf="@id/input_start_date" />
+
+                        <TextView
+                            android:id="@+id/input_end_date"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="10dp"
+
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+
+                            android:hint="@string/add_lesson_end_date"
+                            android:padding="2dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_date"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/date_to_label"
+                            app:layout_constraintTop_toTopOf="@+id/icon_date" />
+
+                        <!--        time    -->
+
+                        <TextView
+                            android:id="@+id/time_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="@string/add_lesson_time"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="@id/name_label"
+                            app:layout_constraintTop_toBottomOf="@+id/input_end_date" />
+
+                        <ImageView
+                            android:id="@+id/icon_time"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_time"
+                            app:layout_constraintEnd_toEndOf="@+id/icon_name"
+                            app:layout_constraintStart_toStartOf="@id/icon_name"
+                            app:layout_constraintTop_toBottomOf="@id/time_label" />
+
+                        <TextView
+                            android:id="@+id/input_start_time"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+                            android:hint="@string/add_lesson_start_time"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_time"
+                            app:layout_constraintEnd_toStartOf="@+id/time_to_label"
+                            app:layout_constraintStart_toStartOf="@+id/spinner_repeat"
+                            app:layout_constraintTop_toTopOf="@+id/icon_time" />
+
+                        <TextView
+                            android:id="@+id/time_to_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:text="@string/add_lesson_to"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/input_start_time"
+                            app:layout_constraintEnd_toStartOf="@+id/input_end_time"
+                            app:layout_constraintStart_toEndOf="@+id/input_start_time"
+                            app:layout_constraintTop_toTopOf="@id/input_start_time" />
+
+                        <TextView
+                            android:id="@+id/input_end_time"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+                            android:hint="@string/add_lesson_end_time"
+                            android:padding="5dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_time"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/time_to_label"
+                            app:layout_constraintTop_toTopOf="@+id/icon_time" />
+
+
+                        <!--        location    -->
+
+                        <TextView
+                            android:id="@+id/location_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/add_lesson_location"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="@id/name_label"
+                            app:layout_constraintTop_toBottomOf="@+id/input_end_time" />
+
+                        <ImageView
+                            android:id="@+id/icon_location"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_location"
+                            app:layout_constraintEnd_toEndOf="@+id/icon_name"
+                            app:layout_constraintStart_toStartOf="@id/icon_name"
+                            app:layout_constraintTop_toBottomOf="@id/location_label" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_location"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/input_bkg_primary"
+                            android:fontFamily="@font/inter_medium"
+                            android:hint="@string/add_lesson_location"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon_location"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/spinner_repeat"
+                            app:layout_constraintTop_toTopOf="@+id/icon_location" />
+
+                        <!--         custom days list   -->
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/custom_days_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/input_location" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <!--            control buttons -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_bkg_secondary"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/cancel"
+                    app:backgroundTint="@null"/>
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btn_bkg_primary"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/next"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

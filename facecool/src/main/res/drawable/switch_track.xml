@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape>
+            <stroke android:color="@color/camera_screen_spinner_thumb_active" android:width="2dp"/>
+            <solid android:color="@color/camera_screen_spinner_track_active" />
+            <corners android:radius="9dp" />
+            <size android:height="18dp" />
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape>
+            <stroke android:color="@color/camera_screen_spinner_thumb_inactive" android:width="2dp"/>
+            <solid android:color="@color/camera_screen_spinner_track_inactive" />
+            <corners android:radius="9dp" />
+            <size android:height="18dp" />
+        </shape>
+    </item>
+</selector>

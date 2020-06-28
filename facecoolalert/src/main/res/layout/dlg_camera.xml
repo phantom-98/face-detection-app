@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="@dimen/camera_spinner_width"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="8dp"
+           android:background="@drawable/spinner_dropdown_bg">
+
+           <LinearLayout
+               android:id="@+id/layout_all"
+               style="@style/SpinnerDropdownItem">
+               <ImageView
+                   style="@style/SpinnerCheckbox" />
+
+               <TextView
+                   android:text="All Cameras"
+                   style="@style/SpinnerText" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_camera1"
+               style="@style/SpinnerDropdownItem">
+               <ImageView
+                   style="@style/SpinnerCheckbox" />
+
+               <TextView
+                   android:text="Camera 1"
+                   style="@style/SpinnerText" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_camera2"
+               style="@style/SpinnerDropdownItem">
+               <ImageView
+                   style="@style/SpinnerCheckbox" />
+
+               <TextView
+                   android:text="Camera 2"
+                   style="@style/SpinnerText" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_camera3"
+               style="@style/SpinnerDropdownItem">
+               <ImageView
+                   style="@style/SpinnerCheckbox" />
+
+               <TextView
+                   android:text="Camera 3"
+                   style="@style/SpinnerText" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_camera4"
+               style="@style/SpinnerDropdownItem">
+               <ImageView
+                   style="@style/SpinnerCheckbox" />
+
+               <TextView
+                   android:text="Camera 4"
+                   style="@style/SpinnerText" />
+
+           </LinearLayout>
+
+       </LinearLayout>
+   </LinearLayout>
+</layout>

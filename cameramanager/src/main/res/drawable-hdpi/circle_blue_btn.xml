@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background when button is pressed -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#44132558" />
+        </shape>
+    </item>
+    <!-- Background when button is not pressed -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#132558" />
+        </shape>
+    </item>
+</selector>

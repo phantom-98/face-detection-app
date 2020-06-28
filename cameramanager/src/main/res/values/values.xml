@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#555</color>
+    <color name="colorPrimary">#555</color>
+    <color name="colorPrimaryDark">#ddd</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="allow_storage_permission">Allow permissions to view files</string>
+    <string name="app_name">Folder Picker</string>
+    <string name="cancel">Cancel</string>
+    <string name="location">Location</string>
+    <string name="neww">New</string>
+    <string name="select">Select</string>
+    <string name="title">Select Folder</string>
+    <string name="up">Up</string>
+</resources>

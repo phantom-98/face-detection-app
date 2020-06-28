@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="com.facecoolalert.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.Account.ResetPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            />
+
+        <activity
+            android:name=".ui.Account.ReadTermsAndConditions"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            />
+        <activity
+            android:name=".ui.Account.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.Account.SIgnUpActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.subject.reports.EnrollmentReportsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.subject.visits.SubjectVisits"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.subject.verification.VerificationActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.subject.multiEnrollment.FolderPicker.EnrollFolder"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.subject.enrollments.EnrollSubject"
+            android:exported="false"
+            android:label="@string/title_activity_enroll_subject"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".ui.subject.enrollments.SubjectCard"
+            android:exported="false"
+            android:label="@string/title_activity_enroll_subject"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name="com.facecoolalert.ui.MainActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.facecoolalert.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+    </application>
+
+</manifest>

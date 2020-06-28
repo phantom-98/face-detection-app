@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_layout">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <ImageView
+        android:id="@+id/center_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:id="@+id/title_text_fragment"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="25sp"
+        android:layout_marginTop="75dp"
+        android:lineHeight="35sp"
+        android:textColor="@color/black"
+        android:text="@string/explore_online_course"
+        android:paddingStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center_image"
+        app:layout_constraintBottom_toTopOf="@+id/text_description_fragment"/>
+
+    <TextView
+        android:id="@+id/text_description_fragment"
+        android:fontFamily="@font/inter_regular"
+        android:paddingStart="15dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="150dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_fragment"
+        app:layout_constraintStart_toStartOf="parent" />
+    
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

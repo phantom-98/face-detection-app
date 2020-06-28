@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_type"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#001E2C"
+                android:src="@drawable/ic_mirror"
+                android:layout_marginRight="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_camera_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:text="Camera Name"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_camera_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:text="Camera Description"
+                    android:ellipsize="marquee"
+                    android:lines="1"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_remove"
+                android:clickable="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_trash"
+                android:background="@drawable/circle_btn"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

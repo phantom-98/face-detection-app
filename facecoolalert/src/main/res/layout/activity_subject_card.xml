@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/backgroundColor">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FAFAFA"
+    android:orientation="vertical"
+    tools:context=".ui.subject.enrollments.EnrollSubject">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+
+            android:background="@drawable/top_blue"
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture"
+
+            android:layout_width="154dp"
+            android:layout_height="154dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="111dp"
+            android:background="@drawable/initial_background"
+            android:src="@drawable/profile"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_user_image"
+            android:layout_width="154dp"
+            android:layout_height="154dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="111dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+
+                android:id="@+id/editDp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:background="@drawable/circle_red_btn"
+
+
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_pencil" />
+
+            <TextView
+                android:id="@+id/qualityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_0_0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+            <androidx.legacy.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+
+                >
+
+            <LinearLayout
+
+                android:id="@+id/showDps"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/textinputborder"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/camera_choose"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#132558"
+                    android:src="@drawable/camera"
+                    tools:src="@drawable/camera"
+
+                    />
+
+                <!-- Auto layout, variables, and unit scale are not yet supported -->
+                <ImageButton
+                    android:id="@+id/file_choose"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/textinputborder"
+                    android:src="@drawable/folder2"
+                    tools:src="@drawable/folder2" />
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+        <TextView
+
+
+            android:text="@string/subject_card"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="20dp"
+
+            >
+        <ImageView
+
+            android:layout_marginTop="6dp"
+            app:srcCompat="@drawable/arrowleft"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+
+
+            />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/facecoolicon"
+
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="20dp"
+
+        >
+
+
+        <!--        start of a field-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watchlist"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textinputborder"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <Spinner
+                android:id="@+id/watchlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/watchlistentries"
+                android:hint="Enter Watchlist" />
+
+        </LinearLayout>
+
+
+        <!--        end of a field-->
+
+<!--        //other fields-->
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        end of a field-->
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        end of a field-->
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter ID" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        end of a field-->
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        end of a field-->
+
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phone"
+                android:inputType="phone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        end of a field-->
+
+        <!--        start of a field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        end of a field-->
+
+
+
+
+
+
+<!--        //end of other fields-->
+
+
+    </LinearLayout>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="0dp"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:padding="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="100"
+
+        >
+
+        <Button
+            android:id="@+id/verification_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:background="#132558"
+            android:padding="17dp"
+            android:text="@string/verification"
+            android:textColor="#FFFFFF"
+
+            android:textSize="11sp" />
+
+
+        <Button
+            android:id="@+id/visitsbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+
+            android:background="@android:color/transparent"
+            android:text="@string/visits"
+
+
+            android:textColor="#333333"
+            android:textSize="11sp" />
+
+
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="100"
+
+        >
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:backgroundTint="#EBEBEB"
+            android:textColor="#4D4D4D"
+            android:layout_weight="40"
+            android:padding="20dp"
+
+            />
+        <Space
+            android:layout_weight="70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+
+        <Button
+            android:id="@+id/submitbutton"
+            android:layout_weight="40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:backgroundTint="#CF203C"
+            android:textColor="@color/white"
+            android:padding="20dp"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
+
+    </ScrollView>
+</layout>
